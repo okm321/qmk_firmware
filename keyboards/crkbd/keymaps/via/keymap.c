@@ -61,14 +61,14 @@ void x_finished_1 (tap_dance_state_t *state, void *user_data) {
   xtap_state.state = dance_lang(state);
   switch (xtap_state.state) {
     case SINGLE_TAP:
-        register_code(KC_F13);
+        // register_code(KC_F13);
         register_code(KC_LNG2);
         break;
     case SINGLE_HOLD:
         layer_on(1);
         break;
     case DOUBLE_TAP:
-        register_code(KC_F16);
+        // register_code(KC_F16);
         register_code(KC_LNG1);
         break;
   }
@@ -77,14 +77,14 @@ void x_finished_1 (tap_dance_state_t *state, void *user_data) {
 void x_reset_1 (tap_dance_state_t *state, void *user_data) {
   switch (xtap_state.state) {
     case SINGLE_TAP:
-        unregister_code(KC_F13);
+        // unregister_code(KC_F13);
         unregister_code(KC_LNG2);
         break;
     case SINGLE_HOLD:
         layer_off(1);
         break;
     case DOUBLE_TAP:
-        unregister_code(KC_F16);
+        // unregister_code(KC_F16);
         unregister_code(KC_LNG1);
         break;
   }
